@@ -21,7 +21,7 @@ script:
   - rustup component add rustfmt
   - cargo fmt -- --check
   - rustup component add clippy
-  - cargo clippy
+  - cargo clippy -- --warn rust-2018-idioms
 
 notifications:
   email:

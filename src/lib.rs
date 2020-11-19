@@ -228,13 +228,13 @@ where
 }
 
 impl<T: AsRef<[u8]>> fmt::Debug for String<T> {
-    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, fmt: &mut fmt::Formatter<'_>) -> fmt::Result {
         (**self).fmt(fmt)
     }
 }
 
 impl<T: AsRef<[u8]>> fmt::Display for String<T> {
-    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, fmt: &mut fmt::Formatter<'_>) -> fmt::Result {
         (**self).fmt(fmt)
     }
 }
